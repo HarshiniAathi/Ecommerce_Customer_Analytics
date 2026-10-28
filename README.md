@@ -32,7 +32,15 @@ This project uses the UCI Online Retail dataset, which contains historical onlin
 
 **Dataset source:** [UCI Machine Learning Repository — Online Retail](https://archive.ics.uci.edu/dataset/352/online+retail)
 
-The original `OnlineRetail.csv` file is excluded from this GitHub repository because of its file size. Download the dataset from the source above and place it in the `dataset/` folder before running the Python scripts.
+The original `OnlineRetail.csv` file is not included in this repository because of its size. Download it from the source above and place it inside the `dataset/` folder before running the Python scripts.
+
+The repository contains three processed customer analysis datasets:
+
+* `customer_rfm.csv`
+* `customer_segments.csv`
+* `cohort_retention.csv`
+
+Other large intermediate CSV files and the generated SQLite database are kept locally and are not included in this repository.
 
 ## Project Structure
 
@@ -42,22 +50,26 @@ Ecommerce_Customer_Analytics/
 │   ├── customer_rfm.csv
 │   ├── customer_segments.csv
 │   └── cohort_retention.csv
-|
 ├── scripts/
 │   ├── inspect_data.py
 │   ├── clean_data.py
 │   ├── setup_database.py
 │   ├── run_sql.py
 │   ├── export_rfm.py
-│   └── create_customer_segments.py
+│   ├── create_customer_segments.py
 │   └── create_cohort_analysis.py
 ├── sql/
-├── excel/
 ├── powerbi/
 │   └── Ecommerce_Customer_Analytics.pbix
 ├── screenshots/
+│   ├── 01_Executive_Overview.png
+│   ├── 02_Customer_Segmentation.png
+│   ├── 03_Cohort_Retention.png
+│   ├── 04_Customer_360.png
+│   └── 05_Retention_Scenarios.png
 ├── documentation/
 │   └── Project_Report.md
+├── .gitignore
 └── README.md
 ```
 
@@ -96,7 +108,7 @@ Explores hypothetical retention uplift scenarios and estimates the number of pot
 ## Key Findings
 
 * The analysis includes 4,338 identified customers.
-* The customer segmentation contains 979 Champions, 523 Loyal Customers, 482 Recent Customers, 854 At Risk customers, and 1,500 Dormant Customers.
+* Customer segmentation contains 979 Champions, 523 Loyal Customers, 482 Recent Customers, 854 At Risk customers, and 1,500 Dormant Customers.
 * At Risk and Dormant customers together represent approximately 54.3% of the analyzed customer base.
 * November 2011 recorded the highest monthly revenue in the current analysis, at approximately 1.50 million.
 * Cohort analysis provides insight into changes in repeat purchasing activity over time.
@@ -116,7 +128,7 @@ Explores hypothetical retention uplift scenarios and estimates the number of pot
 
 * The dataset covers December 2010 through December 2011, with December 2011 incomplete.
 * The current transaction revenue calculation includes negative-quantity return transactions.
-* Customer segments and health scores are based on transparent business rules, not a trained predictive model.
+* Customer segments and health scores are based on business rules, not a trained predictive model.
 * Retention uplift scenarios are hypothetical calculations, not validated forecasts.
 * The results describe historical data and should not be interpreted as current business performance.
 
@@ -128,8 +140,3 @@ See [`documentation/Project_Report.md`](documentation/Project_Report.md) for the
 
 Developed as a data analytics portfolio project to demonstrate practical skills in Python, SQL, data preparation, customer analytics, and Power BI visualization.
 
-# Large local dataset
-dataset/OnlineRetail.csv
-
-# Generated SQLite database
-ecommerce.db
