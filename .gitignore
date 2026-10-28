@@ -1,0 +1,31 @@
+# Python cache files
+
+**pycache**/
+*.py[cod]
+
+# Virtual environments
+
+.venv/
+venv/
+
+# Temporary files
+
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# Local environment variables and secrets
+
+.env
+.env.*
+
+# Jupyter Notebook checkpoints
+
+.ipynb_checkpoints/
+
+# Large local dataset
+dataset/OnlineRetail.csv
+
+# Generated SQLite database
+ecommerce.db
