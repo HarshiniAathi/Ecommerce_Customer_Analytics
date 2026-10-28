@@ -39,13 +39,10 @@ The original `OnlineRetail.csv` file is excluded from this GitHub repository bec
 ```text
 Ecommerce_Customer_Analytics/
 ├── dataset/
-│   ├── OnlineRetail.csv
-│   ├── cleaned_all_transactions.csv
-│   ├── cleaned_sales.csv
-│   ├── cleaned_customers.csv
 │   ├── customer_rfm.csv
 │   ├── customer_segments.csv
 │   └── cohort_retention.csv
+|
 ├── scripts/
 │   ├── inspect_data.py
 │   ├── clean_data.py
